@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yl3-dM-NN0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="typing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPk-cL-CpI">
+                                <rect key="frame" x="105" y="696" width="205" height="30"/>
+                                <state key="normal" title="Select Challence"/>
+                                <connections>
+                                    <action selector="selectChanllence:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gk3-Pe-49R"/>
+                                    <action selector="showChallenge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUD-7G-aIN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xPk-cL-CpI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="3by-5m-2zf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xPk-cL-CpI" secondAttribute="trailing" constant="104" id="BDa-zj-le2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xPk-cL-CpI" secondAttribute="bottom" constant="136" id="n3g-Ci-s16"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fn8-cF-Ji9"/>
+                    <connections>
+                        <segue destination="i1O-z8-LYH" kind="show" identifier="challencsegue" id="fte-uL-cDt"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="615.94202898550725" y="101.78571428571428"/>
+        </scene>
+        <!--Challenge View Controller-->
+        <scene sceneID="j48-kw-ULL">
+            <objects>
+                <viewController id="i1O-z8-LYH" customClass="ChallengeViewController" customModule="typing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rl6-bz-PLS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Gaf-dS-z4L"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0WE-6r-gpH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpA-OU-rb7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1339" y="198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RxH-iH-2PG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yl3-dM-NN0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VYd-is-Nh3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g41-c7-AQm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHP-8I-cD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="149"/>
+        </scene>
+    </scenes>
+</document>
